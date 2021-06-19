@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <title>Weather</title>
+</head>
+<body>
+   <div id="searchContainer">
+      <input class="seachControl" type="text" placeholder="City Name or Zip Code" id="searchInput">
+      <button class="searchControl" id="searchBtn">Search</button>
+   </div>
+   <div id="weatherContainer">
+      <div id="weatherDescription">
+         <h1 id="cityHeader"></h1>
+         <div id="weatherMain">
+            <div id="temperature"></div>
+            <div id="weatherDescriptionHeader"></div>
+            <div><img id="documentIconImg"></div>
+         </div>
+         <hr>
+         <div id="windSpeed"></div>
+         <div id="humidity"></div>
+         <div id="uvIndex"></div>
+      </div>
+   </div>
+
+   <script src="./assets/js/script.js"></script>
+</body>
+</html>
