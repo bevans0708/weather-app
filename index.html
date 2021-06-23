@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
    <link rel="stylesheet" href="./assets/css/style.css">
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+      </script>
    <title>Weather</title>
 </head>
+
 <body>
    <div id="searchContainer">
       <input class="seachControl" type="text" placeholder="City Name or Zip Code" id="searchInput">
       <button class="searchControl" id="searchBtn">Search</button>
    </div>
-   <div id="weatherContainer">
+   <div id="weatherContainer" class="card" style="width: 18rem;">
+      <div id="weatherDescription" class="card-body">
+         <h1 id="cityHeader" class="card-title">City Name</h1>
+         <p id="weatherMain" class="card-text">
+         <div id="temperature">Temperature</div>
+         <div id="weatherDescriptionHeader">Description</div>
+         <div><img id="documentIconImg">Image</div>
+         </p>
+         <hr>
+         <div id="windSpeed">Wind Speed</div>
+         <div id="humidity">Humidity</div>
+         <div id="uvIndex">UV Index</div>
+      </div>
+   </div>
+   <!-- <div id="weatherContainer">
       <div id="weatherDescription">
          <h1 id="cityHeader"></h1>
          <div id="weatherMain">
@@ -25,8 +46,9 @@
          <div id="humidity"></div>
          <div id="uvIndex"></div>
       </div>
-   </div>
+   </div> -->
 
    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
