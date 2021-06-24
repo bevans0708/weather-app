@@ -1,0 +1,91 @@
+body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width: 100%;
+   background-image: url("../images/rain.jpg");
+   background-size: cover;
+}
+
+#searchContainer {
+   text-align: center;
+   padding-top: 25px;
+   height: 10vh;
+}
+
+#searchContainer input {
+   color: white;
+   background-color: rgba(0, 0, 0, 0.6);
+   border-radius: 15px;
+   height: 50%;
+   width: 30%;
+   border: none;
+   text-align: center;
+   font-size: 25px;
+   font-weight: bold;
+}
+
+#searchContainer button {
+   color: white;
+   background-color: rgba(255, 255, 255, 0.6);
+   border-radius: 15px;
+   height: 50%;
+   border: none;
+   text-align: center;
+   font-size: 25px;
+   font-weight: bold;
+}
+
+#weatherContainer {
+   text-align: center;
+   display: inline-block;
+   height: 60vh;
+   width: 30%;
+}
+
+#weatherCard {
+   margin: 0;
+   justify-content: center;
+}
+
+#forecastCard {
+   
+}
+
+#forecastContainer {
+   text-align: center;
+   display: inline-block;
+   height: 60vh;
+   width: 65%;
+}
+
+#title {
+   border-radius: 10px;
+   background-color: rgba(0, 0, 0, 0.6);
+   color: white;
+   height: 10%;
+   width: 100%;
+}
+
+.card {
+   border-radius: 10px;
+   color: white;
+   background-color: rgba(0, 0, 0, 0.6);
+}
+
+#cardContainer {
+   justify-content: center;
+   padding-top: 10px;
+   width: 100%;
+   display: flex;
+}
+
+#recentSearch {
+   color: white;
+   text-align: center;
+}
+
+#recentSearch h2 {
+   background-color: rgba(0, 0, 0, 0.6);
+   padding: 15px;
+}
