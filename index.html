@@ -13,25 +13,25 @@
 </head>
 
 <body>
-   <section id="searchContainer">
-      <input class="searchControl" type="text" placeholder="City Name or Zip Code" id="searchInput">
-      <button class="searchControl" id="searchBtn"><img href="https://www.flaticon.com/authors/dinosoftlabs"></button>
-   </section>
+   <div class="input-group mb-3" id="searchContainer">
+      <input class="" type="text" placeholder="Enter a City Name" id="searchInput">
+      <button class="btn btn-outline-secondary" id="searchBtn"><img src="./assets/images/search.svg" class="svg"></button>
+   </div>
    <section id="weatherContainer">
       <h1 id="title">Current</h1>
       <div id="cardContainer">
          <div id="weatherCard" class="card" style="width: 18rem;">
             <div id="weatherDescription" class="card-body">
-               <h2 id="cityHeader" class="card-title">City Name</h2>
+               <h2 id="cityHeader" class="card-title"></h2>
                <p id="weatherMain" class="card-text">
-               <div id="temperature">Temperature</div>
-               <div id="weatherDescriptionHeader">Description</div>
-               <div><img id="documentIconImg">Image</div>
+               <div id="temperature"></div>
+               <div id="weatherDescriptionHeader"></div>
+               <div><img id="iconImg"></div>
                </p>
                <hr>
-               <div id="windSpeed">Wind Speed</div>
-               <div id="humidity">Humidity</div>
-               <div id="uvIndex">UV Index</div>
+               <div id="windSpeed">Wind Speed:  </div>
+               <div id="humidity">Humidity:  </div>
+               <div id="uvIndex">UV Index:  </div>
             </div>
          </div>
       </div>
