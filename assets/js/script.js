@@ -92,7 +92,14 @@ function citySearch() {
    
 }
    
-   searchBtn.addEventListener('click', function() {
+   searchBtn.addEventListener('click', function() { 
+      var locationBtn = document.createElement("button");
+      var saveLocation = function() {
+         localStorage.setItem('Location', searchInput.value)
+         locationBtn.innerHTML = searchInput.value
+         $("#searchContainer").append(locationBtn)
+         $("")
+      }
+      saveLocation();
       citySearch();
-      // window.location.reload(true);
    })

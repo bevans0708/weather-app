@@ -92,3 +92,11 @@ body {
    background-color: rgba(0, 0, 0, 0.6);
    padding: 15px;
 }
+
+#searchContainer button {
+   border-radius: 15px;
+   padding: 10px;
+   margin: 0 20px;
+   width: auto;
+   display: inline-block;
+}
