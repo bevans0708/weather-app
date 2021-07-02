@@ -3,6 +3,7 @@ var searchInput = document.getElementById('searchInput')
 var appKey = "ee6ddb4a548859b074fe9d14d14de471"
 var cardContainer = document.getElementById('cardContainer')
 var forecastOne = document.getElementById('forecastCard')
+var locationArr = [];
 
 
 function citySearch() {
@@ -91,15 +92,16 @@ function citySearch() {
    });
    
 }
+
+var saveLocation = function() {
+   var locationBtn = document.createElement("button");
+   localStorage.setItem('Location', searchInput.value)
+   locationBtn.innerHTML = searchInput.value
+   $("#searchContainer").append(locationBtn)
+   
+}
    
    searchBtn.addEventListener('click', function() { 
-      var locationBtn = document.createElement("button");
-      var saveLocation = function() {
-         localStorage.setItem('Location', searchInput.value)
-         locationBtn.innerHTML = searchInput.value
-         $("#searchContainer").append(locationBtn)
-         $("")
-      }
       saveLocation();
       citySearch();
    })
