@@ -13,7 +13,7 @@
    * [Contact Info](#questions)
 
    ## Screenshot
-   ![image](https://github.com/bevans0708/weather-app/)
+   ![image](https://github.com/bevans0708/weather-app/blob/main/assets/images/screenshot.PNG)
    
    ## Installation
    No installation required at this time
