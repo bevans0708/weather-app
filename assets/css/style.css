@@ -7,6 +7,7 @@ body {
    background-size: cover;
 }
 
+/* Search container styling */
 .searchContainer {
    justify-content: center;
    padding-top: 25px;
@@ -43,6 +44,7 @@ body {
    border-bottom-right-radius: 15px;
 }
 
+/* weather container styling */
 .weatherContainer {
    text-align: center;
    display: inline-block;
@@ -55,6 +57,7 @@ body {
    justify-content: center;
 }
 
+/* some foercast contianer styling */
 .forecastContainer {
    text-align: center;
    display: inline-block;
@@ -62,6 +65,7 @@ body {
    width: 65%;
 }
 
+/* other random styling for multiple areas to keep code DRY */
 .title {
    border-radius: 10px;
    background-color: rgba(0, 0, 0, 0.6);
@@ -83,6 +87,7 @@ body {
    display: flex;
 }
 
+/* recent search contianer styling */
 .recentSearch {
    color: white;
    text-align: center;

@@ -5,10 +5,12 @@ var cardContainer = document.getElementById('cardContainer')
 var forecastOne = document.getElementById('forecastCard')
 var locationArr = [];
 
-
+// Fetch function that is called when search button is clicked
 function citySearch() {
+      // This fetch gets the data called by the city searched 
       $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + searchInput.value + "&units=imperial&appid=" + appKey, function (data) {
       searchInput.value = "";
+      // variables that contain the data from the fetch call to be used later
       var cityName = data.name
       var temp = Math.floor(data.main.temp) + " \u00B0F";
       var description = data.weather[0].description
@@ -20,6 +22,7 @@ function citySearch() {
       
       console.log(lat, lon);
       
+      // Jquery statements to insert fetch data into the html section for Current Weather
       $("#cityHeader").append(cityName);
       $("#temperature").append(temp);
       $("#weatherDescriptionHeader").append(description);
@@ -27,8 +30,10 @@ function citySearch() {
       $("#windSpeed").append(wind);
       $("#humidity").append(humidity);
       
+      // Fetch call that pulls up all other data such as UV and forecast
       $.getJSON("https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + appKey, function (data) {
          console.log(data);
+         // more variable to store fetch data
          var uv = data.current.uvi
          var dailyArr = data.daily
          var datesArr = [];
@@ -38,6 +43,8 @@ function citySearch() {
          console.log(datesArr);
          $("#uvIndex").append(uv);
 
+         // below are variables and statements to insert the fetch data into each card in the forecast container of the HTML
+         // I still need to create a loop to refactor the code to be more DRY.
          var dayConvert = moment.unix(datesArr[1]).format("MMM Do");
          var temp = Math.floor(data.daily[1].temp.day) + " \u00B0F";
          var description = data.daily[1].weather[0].description
@@ -93,6 +100,8 @@ function citySearch() {
    
 }
 
+// This function saves search values into local storage and creates buttons for user to click on to pull up recent searches
+// still need to set up the "getItem" call 
 var saveLocation = function() {
    var locationBtn = document.createElement("button");
    localStorage.setItem('Location', searchInput.value)
@@ -100,7 +109,8 @@ var saveLocation = function() {
    $("#searchContainer").append(locationBtn)
    
 }
-   
+   // Simple event listener to call the needed functions after the search button is clicked.
+   // Still need to clear the page of old data after new search is called
    searchBtn.addEventListener('click', function() { 
       saveLocation();
       citySearch();
